@@ -31,6 +31,8 @@ import Chat from './gpt/Chat';
 
 import NotFound from './errors/NotFound';
 
+import TableauRedirect from './TableauRedirect';
+
 function RedirectToDataVizMod2() {
     const navigate = useNavigate();
     React.useEffect(() => {
@@ -72,6 +74,7 @@ function App() {
                     <Route path="/changelog" element={<ChangeLog/>}/>
 
                     <Route path="/datavizmod2" element={<RedirectToDataVizMod2 />} />
+                    <Route path="/datavizmod3" element={<TableauRedirect />} />
                 </Routes>
             </Router>
         </div>
