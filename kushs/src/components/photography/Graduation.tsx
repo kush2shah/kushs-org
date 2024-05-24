@@ -16,11 +16,16 @@ function Graduation() {
         <div>
             <h1>Graduation</h1>
 
-            <a href='/book' className='link'>
+            <a className='link'>
                 <button className={'gh-button'}>
-                    Register for Photos
+                    Bookings are closed
                 </button>
             </a>
+
+            <div>
+                <p>Thank you for your interest in booking your grad photos with me. My bookings are closed for Spring 2024, and in the future, will only be available via referral.</p>
+                <p>If you would like to take your grad photos with me, feel free to reach out to me directly at photo@kushs.org.</p>
+            </div>
 
             <div className="image-container">
                 <div className="image-wrapper">

@@ -9,7 +9,7 @@ import centibleOnboard from '../../assets/experience/centible/centible_onboard.p
 import centibleInbox from '../../assets/experience/centible/centible_inbox.png'
 import centibleCustomization from '../../assets/experience/centible/centible_customization.png'
 
-import unfinishedApp from '../../assets/experience/unfinished_app_icon.png'
+import unfinishedApp from '../../assets/experience/apperture/unfinished_app_icon.png'
 import appertureHome from '../../assets/experience/apperture/apperture_home.jpeg'
 import apperturePost from '../../assets/experience/apperture/apperture_post.png'
 

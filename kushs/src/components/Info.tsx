@@ -3,7 +3,7 @@ import React from 'react';
 import {FaLinkedinIn} from 'react-icons/fa';
 import {TiSocialInstagram} from 'react-icons/ti';
 
-import headshot from '../assets/digital/a6600/headshot.jpeg'
+import headshot from '../assets/digital/a7/headshot.jpeg'
 
 const Info: React.FC = () => {
     return (
@@ -11,7 +11,7 @@ const Info: React.FC = () => {
             <header className="Info-header">
                 <div className={'image-container'}>
                     <div className={'image-wrapper'}>
-                        <img src={headshot} alt={'Me in Valencia'}/>
+                        <img src={headshot} alt={'Me in front of the Old Well'}/>
                     </div>
                 </div>
                 <h1>
