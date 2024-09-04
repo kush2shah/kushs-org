@@ -42,6 +42,15 @@ function RedirectToDataVizMod2() {
     return null;
 }
 
+function RedirectToCreditCardGuide() {
+    const navigate = useNavigate();
+    React.useEffect(() => {
+        window.location.href = "https://kushah.notion.site/";
+    }, [navigate]);
+
+    return null;
+}
+
 function App() {
     const [darkMode, setDarkMode] = React.useState(false);
     return (
@@ -75,6 +84,7 @@ function App() {
 
                     <Route path="/datavizmod2" element={<RedirectToDataVizMod2 />} />
                     <Route path="/datavizmod3" element={<TableauRedirect />} />
+                    <Route path="/cc" element={<RedirectToCreditCardGuide />} />
                 </Routes>
             </Router>
         </div>
