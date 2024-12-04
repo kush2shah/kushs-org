@@ -60,7 +60,7 @@ const Home: React.FC = () => {
 
                 <div className="credit">
                     <p>
-                        With love from NC (c) 2023 Kush Shah<br></br>
+                        With love from NC (c) 2024 Kush Shah<br></br>
                         <a href="https://github.com/kush2shah/website" target="_blank" rel="noopener noreferrer"
                            className="icon-link">
                             <FaGithub/>
