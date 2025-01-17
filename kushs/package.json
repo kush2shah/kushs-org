@@ -32,10 +32,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "postbuild": "cp build/index.html build/404.html",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build -r https://github.com/kush2shah/website.git"
+    "deploy": "npm run build && gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [

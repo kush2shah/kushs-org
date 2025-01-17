@@ -1,51 +1,55 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { FiMenu } from "react-icons/fi"; // Hamburger Menu Icon
-import { CgClose } from "react-icons/cg"; // Close Menu Icon
+import { Menu, X } from 'lucide-react';
 import '../css/global/NavBar.scss';
 
 const NavBar = () => {
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [isOpen, setIsOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
 
     useEffect(() => {
-        window.addEventListener("scroll", () => {
-            if (window.scrollY > 50) {
-                setIsScrolled(true);
-            } else {
-                setIsScrolled(false);
-            }
-        });
+        const handleScroll = () => {
+            setIsScrolled(window.scrollY > 50);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
     const toggleMenu = () => {
-        setIsMenuOpen(!isMenuOpen);
-    }
+        setIsOpen(!isOpen);
+    };
+
+    const closeMenu = () => {
+        setIsOpen(false);
+    };
 
     return (
-        <nav className={`navbar ${isScrolled ? "scrolled" : ""}`}>
-            <div></div>
-
-            <ul className={`navbar-menu ${isMenuOpen ? "show-menu" : ""}`}>
-                <li>
-                    <Link to="/" onClick={toggleMenu}>Home</Link>
+        <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
+            <ul className={`nav-menu ${isOpen ? 'open' : ''}`}>
+                <li className="nav-menu__item">
+                    <Link to="/" onClick={closeMenu}>Home</Link>
                 </li>
-                <li>
-                    <Link to="/photography" onClick={toggleMenu}>Photography</Link>
+                <li className="nav-menu__item">
+                    <Link to="/photography" onClick={closeMenu}>Photography</Link>
                 </li>
-                <li>
-                    <Link to="/experience" onClick={toggleMenu}>Experience</Link>
+                <li className="nav-menu__item">
+                    <Link to="/experience" onClick={closeMenu}>Experience</Link>
                 </li>
-                <li>
-                    <Link to="/info" onClick={toggleMenu}>Info</Link>
+                <li className="nav-menu__item">
+                    <Link to="/info" onClick={closeMenu}>Info</Link>
                 </li>
             </ul>
 
-            <button onClick={toggleMenu} className="menu-icon">
-                {isMenuOpen ? <CgClose /> : <FiMenu />}
+            <button
+                className="menu-button"
+                onClick={toggleMenu}
+                aria-label={isOpen ? 'Close menu' : 'Open menu'}
+            >
+                {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
         </nav>
     );
-}
+};
 
 export default NavBar;
